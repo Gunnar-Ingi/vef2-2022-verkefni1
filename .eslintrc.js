@@ -4,10 +4,7 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  extends: [
-    'airbnb-base',
-    'prettier',
-  ],
+  extends: ['airbnb-base', 'prettier'],
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
@@ -23,11 +20,14 @@ module.exports = {
       },
     ],
     'import/extensions': 0,
-    'max-len': ['warn', {
-      code: 100,
-      ignoreUrls: true,
-      ignoreComments: true,
-      ignoreTemplateLiterals: true,
-    }],
+    'max-len': [
+      'warn',
+      {
+        code: 100,
+        ignoreUrls: true,
+        ignoreComments: true,
+        ignoreTemplateLiterals: true,
+      },
+    ],
   },
 };
