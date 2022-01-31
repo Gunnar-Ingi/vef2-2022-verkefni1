@@ -1,0 +1,59 @@
+/* stylelint-disable comment-empty-line-before */
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+:root {
+  --spaceing: 1rem;
+  --max-width: 1400px;
+  /* colors */
+  --color-text: #222;
+  --color-text-secondary: #222;
+  --color-link: #069;
+  --color-border: #ccc;
+  /* font setting */
+  --font-size: 16px;
+  --font-family-base: helvetica, arial, sans-serif;
+  --font-family-heading: georgia, serif;
+  /* grid setting */
+  --columns: 12;
+  --gutter: 30px;
+  --offset: 20px;
+}
+
+body {
+  padding-top: var(--spaceing);
+  font-size: var(--font-size);
+  line-height: 1.5;
+  font-family: var(--font-family-base);
+}
+
+h1,
+h2,
+h3,
+header {
+  font-family: var(--font-family-heading);
+}
+
+.wrapper {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 100%;
+  grid-column: span 1;
+  gap: var(--gutter);
+  margin: 0 auto;
+  width: calc(100% - (2 * var(--offset)));
+  max-width: var(--max-width);
+}
