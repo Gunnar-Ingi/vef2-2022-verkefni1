@@ -38,6 +38,7 @@ body {
   font-size: var(--font-size);
   line-height: 1.5;
   font-family: var(--font-family-base);
+  background-color: antiquewhite;
 }
 
 h1,
@@ -45,15 +46,25 @@ h2,
 h3,
 header {
   font-family: var(--font-family-heading);
+  grid-column: 7 / span 8;
 }
 
 .wrapper {
   display: grid;
   grid-template-rows: auto;
-  grid-template-columns: 100%;
+  grid-template-columns: auto;
   grid-column: span 1;
   gap: var(--gutter);
   margin: 0 auto;
   width: calc(100% - (2 * var(--offset)));
   max-width: var(--max-width);
+}
+
+main {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 100%;
+  gap: var(--gutter);
+  margin-bottom: var(--gutter);
+  grid-column: 7 / span 8;
 }

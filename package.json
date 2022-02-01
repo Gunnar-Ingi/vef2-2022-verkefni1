@@ -2,10 +2,11 @@
   "name": "vefverkefni1-2022",
   "version": "1.0.0",
   "description": "tæki og tól fyrir verkefni",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_OPTIONS='--experimental-vm-modules' jest ./test/*.js",
-    "build": "node ./src/build.js",
+    "test": "jest NODE_OPTIONS = '--experimental-vm-modules'  test/*.js",
+    "build": "node ./src/lib/build.js",
     "lint": "eslint ./**/*.js",
     "lint-css": "stylelint styles.css",
     "dev": "browser-sync start --server --files main.js **/*.js *.css index.html",
@@ -31,5 +32,9 @@
     "prettier": "^2.5.1",
     "stylelint": "^14.3.0",
     "stylelint-config-standard": "^24.0.0"
+  },
+  "dependencies": {
+    "@jest/globals": "^27.4.6",
+    "cross-env": "^7.0.3"
   }
 }
