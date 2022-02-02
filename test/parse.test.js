@@ -1,8 +1,15 @@
-import { describe, expect, it } from 'jest';
+import { describe, expect, test } from '@jest/globals';
+import { parse } from '../src/lib/parser';
 
 describe('parser', () => {
-  it('passes a markdown file', () => {
-    expect(true).toBe(false);
+  it('parses a markdown file', () => {
+    const input = `# hello world`;
+
+    const parsed = parse(input);
+
+    console.log('parsed :>> ', parsed);
+
+    expect(parsed).toBe('<h1>hello world</h1>');
   });
 
 });

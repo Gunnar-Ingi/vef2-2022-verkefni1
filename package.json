@@ -5,7 +5,8 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "jest NODE_OPTIONS = '--experimental-vm-modules'  test/*.js",
+    "test": "cross-env NODE_OPTIONS='--experimental-vm-modules' jest test/*.js",
+    "testcov": "cross-env NODE_OPTIONS='--experimental-vm-modules' jest test/*.js --coverage",
     "build": "node ./src/lib/build.js",
     "lint": "eslint ./**/*.js",
     "lint-css": "stylelint styles.css",
