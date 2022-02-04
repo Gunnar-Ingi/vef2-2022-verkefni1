@@ -1,6 +1,11 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { variance, max, mean, median, min, std, sum, range } from 'mathjs';
 
+/**
+ * Calculates various statistics from number array.
+ * @param {numbers} input
+ * @returns object containing numbers
+ */
 export function calculateNum(input) {
 
   if (input === '' || input === undefined || input === null || input.length <= 0) {

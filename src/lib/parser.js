@@ -1,3 +1,8 @@
+/**
+ * parses the input into a number
+ * @param {*} input
+ * @returns integer.
+ */
 export function parse(input) {
   const numPut = input.trim();
 

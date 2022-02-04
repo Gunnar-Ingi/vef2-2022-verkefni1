@@ -2,6 +2,11 @@ import { createReadStream } from 'fs';
 import { createInterface } from 'readline';
 import { parse } from './parser.js';
 
+/**
+ * Scans a file line by line
+ * @param {file} input
+ * @returns array containing a line in each index.
+ */
 export function readData(input) {
 
   async function processLineByLine() {

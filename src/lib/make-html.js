@@ -1,3 +1,8 @@
+/**
+ *  Creates an HTML file containing stats from numbers.
+ * @param {*} entry Contains numbers
+ * @returns HTML template.
+ */
 export function makeHTML(entry) {
 
   const vari = entry.var;
