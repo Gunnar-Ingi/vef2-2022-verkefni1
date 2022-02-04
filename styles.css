@@ -68,3 +68,9 @@ main {
   margin-bottom: var(--gutter);
   grid-column: 7 / span 8;
 }
+
+ul {
+  flex-direction: column;
+  padding: var(--spacing);
+  word-break: break-word;
+}

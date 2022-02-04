@@ -1,11 +1,12 @@
 import { createReadStream } from 'fs';
 import { createInterface } from 'readline';
+import { parse } from './parser.js';
 
 export function readData(input) {
 
   async function processLineByLine() {
     const fileStream = createReadStream(input);
-    let writtenData = [];
+    const writtenData = [];
 
     const rl = createInterface({
       input: fileStream,
@@ -14,7 +15,7 @@ export function readData(input) {
 
 
     for await (const line of rl) {
-      writtenData.push(parseInt(line));
+      writtenData.push(parse(line));
     }
 
     return writtenData;
@@ -22,25 +23,3 @@ export function readData(input) {
 
   return processLineByLine();
 }
-
-//// les skrá af disk og skilar sem string
-//const content = await readDataFile(file);
-//
-//// les string og skilar fylki af tölum
-//const numbers = parse(content);
-//
-//// les fylki af tölum og skilar tölfræði upplýsingum í object
-//const stats = calculate(numbers);
-//
-//// tekur saman upplýsingar sem template þarf
-//const result = {
-//  numbers,
-//  stats,
-//  // hér vantar fleira, t.d. skáarnafn á html skrá
-//};
-//
-//// tekur við upplýsingum og skilar html
-//const template = statsTemplate(title, result);
-//
-//await writeHtmlFile(template);
-//
