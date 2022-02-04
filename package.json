@@ -10,9 +10,9 @@
     "build": "node ./src/lib/build.js",
     "lint": "eslint ./**/*.js",
     "lint-css": "stylelint styles.css",
-    "dev": "browser-sync start --server --files main.js **/*.js *.css index.html",
+    "dev": "browser-sync start --server --directory --files main.js **/*.js *.css dist/*.html",
     "prettier": "npx prettier --write ./**/*.js",
-    "browser-sync": "browser-sync start --server --files index.html *.css"
+    "browser-sync": "browser-sync start --server --directory --files dist/*.html *.css"
   },
   "repository": {
     "type": "git",
