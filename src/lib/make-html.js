@@ -14,7 +14,7 @@ export function makeHTML(entry) {
   <head>
     <meta charset="utf-8" />
     <title>Gagnavinnsla</title>
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="styles.css">
   </head>
 
   <body>
